@@ -1,0 +1,35 @@
+﻿<Window x:Class="KinectTheDots.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800" Background="White">
+
+    <Viewbox>
+
+        <Grid x:Name="LayoutRoot" Width="1600" Height="1600">
+            <!-- <Grid x:Name="LayoutRoot" Width="1920" Height="1080">-->
+            <Polyline x:Name="CrayonElement" Stroke="PowderBlue" StrokeThickness="5"/>
+            <Label Name="lblTime" FontSize="48" HorizontalAlignment="Right" VerticalAlignment="Top" /> 
+            <Canvas x:Name="PuzzleBoardElement"/>
+            <Canvas x:Name="GameBoardElement">
+
+                <!--  <Image x:Name="HandCursorElement" Source="Images/hand.png"
+                         Width="282" Height="272"  RenderTransformOrigin="0.5,0.5">
+                    
+                </Image>
+                -->
+
+                <Ellipse Name="EllipseLeft" Stroke="Red" StrokeThickness="3" Width="20" Height="20"  Visibility="Visible" Canvas.Left="0" Canvas.Top="0"></Ellipse>
+                <Label x:Name="label" Content="time up" Canvas.Left="-486" Canvas.Top="932" RenderTransformOrigin="-0.049,0.468" Width="879" Height="180" FontSize="96" Visibility="Hidden">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="965.142"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window> 
